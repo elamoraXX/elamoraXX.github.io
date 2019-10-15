@@ -37,7 +37,7 @@ font-size: 30px;
 
 .topdh>li {
 	display: inline-block;
-	width: 78px;
+	width: 100px;
 	height: 42px;
 	margin: 18px 0px 0px 0px;
 	font-size: 15px;
@@ -111,10 +111,10 @@ font-size: 30px;
 
 	width: 1208px;
 	height: 100%;
-	display: inline-block;
+	/* display: inline-block; */
 	/* margin: 20px 80.5px 0 80.5px; */
-/* 	margin: -40px 0 0 55px; */
-	margin:auto;
+	/* margin: -40px 0 0 55px; */
+	margin: auto;
 }
 
 .box-div {
@@ -237,13 +237,15 @@ h2 {
 	background-color: #24252A;
 	height: 178px;
 	width: 100%;
+	
 }
 
 .xia_xia {
-	width: 1200;
+	width: 1200px;
 	height: 178px;
-	margin: 0px 157px;
-	float: left;
+	/* margin: 0px 157px; */
+	/* float: left; */
+	margin: auto;
 }
 
 .bb {
