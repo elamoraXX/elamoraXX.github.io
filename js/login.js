@@ -4,6 +4,8 @@ window.onload=function(){
     }
 	var elmora = "elmora";
 	var elmorapwd = "123456";
+	var tourist = "123";
+	var touristpwd = "123";
 	function yz(){
 		var  username = document.getElementById("user_name").value;
 		var  userpwd = document.getElementById("user_pwd").value;
@@ -12,11 +14,19 @@ window.onload=function(){
 			alert("账号或者密码错误！请检查！");
 			return false;
 		}
+		if(tourist!=username && touristpwd!=userpwd){
+			alert("账号或者密码错误！请检查！");
+			return false;
+		}
 		if(elmora==username && elmorapwd==userpwd){
 			alert("登陆成功！");
 			localStorage.setItem("key",username);
 			return yzUsername() && yzPassword() && yzyzm();
-		}
+		}else if(tourist==username && touristpwd==userpwd){
+			alert("登陆成功！");
+			localStorage.setItem("key",username);
+			return yzUsername() && yzPassword() && yzyzm();
+			 }
 		alert("账号或者密码错误！请检查！");
 		return false;
 	}
