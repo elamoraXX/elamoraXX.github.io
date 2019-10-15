@@ -113,7 +113,8 @@ font-size: 30px;
 	height: 100%;
 	display: inline-block;
 	/* margin: 20px 80.5px 0 80.5px; */
-	margin: -40px 0 0 55px;
+/* 	margin: -40px 0 0 55px; */
+	margin:auto;
 }
 
 .box-div {
