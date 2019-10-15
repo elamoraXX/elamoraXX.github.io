@@ -2,36 +2,52 @@ window.onload=function(){
 		
     	createCode();    
     }
-	var elmora = "elmora";
-	var elmorapwd = "123456";
-	var tourist = "123";
-	var touristpwd = "123";
+	var data = [{
+		 elmora : "elmora",
+		 elmorapwd : "123456"
+		 
+	},
+	{
+		tourist : "123",
+		touristpwd : "123"
+	}
+	];
+	
+	
 	function yz(){
 		var  username = document.getElementById("user_name").value;
 		var  userpwd = document.getElementById("user_pwd").value;
+		console.log(username);
+		console.log(userpwd);
 		
-		if(elmora!=username && elmorapwd!=userpwd){
-			alert("账号或者密码错误！请检查！");
-			return false;
-		}
-		if(tourist!=username && touristpwd!=userpwd){
-			alert("账号或者密码错误！请检查！");
-			return false;
-		}
-		if(elmora==username && elmorapwd==userpwd){
+		
+		if(data[0].elmora==username && data[0].elmorapwd==userpwd){
+			alert("登陆成功！");
+			localStorage.setItem("key",username);
+			return yzUsername() && yzPassword() && yzyzm();
+		}else if(data[1].tourist==username && data[1].touristpwd==userpwd){
 			alert("登陆成功！");
 			localStorage.setItem("key",username);
 			return yzUsername() && yzPassword() && yzyzm();
 		}
-		if(tourist==username && touristpwd==userpwd){
-			alert("登陆成功！");
-			localStorage.setItem("key",username);
-			return yzUsername() && yzPassword() && yzyzm();
+		if(data[0].elmora!=username && data[0].elmorapwd!=userpwd){
+			alert("账号或者密码错误！请检查！");
+			return false;
+		}else if(data[1].tourist!=username && data[1].touristpwd!=userpwd){
+			alert("账号或者密码错误！请检查！");
+			return false;
 		}
+		// if(tourist==username && touristpwd==userpwd){
+		// 	alert("登陆成功！");
+		// 	localStorage.setItem("key",username);
+		// 	return yzUsername() && yzPassword() && yzyzm();
+		// }
 		alert("账号或者密码错误！请检查！");
 		return false;
 	}
-
+	function dlsb(){
+		
+	}
 	function PwdLogin() {
 	    var login = document.getElementsByClassName("login_con");
 	    login[0].classList.remove("hidden");
