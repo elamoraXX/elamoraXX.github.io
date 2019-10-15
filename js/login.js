@@ -22,11 +22,12 @@ window.onload=function(){
 			alert("登陆成功！");
 			localStorage.setItem("key",username);
 			return yzUsername() && yzPassword() && yzyzm();
-		}else if(tourist==username && touristpwd==userpwd){
+		}
+		if(tourist==username && touristpwd==userpwd){
 			alert("登陆成功！");
 			localStorage.setItem("key",username);
 			return yzUsername() && yzPassword() && yzyzm();
-			 }
+		}
 		alert("账号或者密码错误！请检查！");
 		return false;
 	}
